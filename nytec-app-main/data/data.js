@@ -70,8 +70,8 @@ export default new Category(0, "home", null, [
 	]),
 
 	new Category(7, "ContactUs", 聯絡我們, [
-		new Url(71, "Contact Website", 聯絡我們 , "https://nytec.net/contact-us"),
-		new inputcategory(72, "Contact Forms", 聯絡我們),
+		new Url(71, "ContactWebsite", 聯絡我們 , "https://nytec.net/contact-us"),
+		new inputcategory(72, "ContactForms", 聯絡我們),
 	]),
 
 	new Category(8, "DedicatedSupport", 奉獻支持, [

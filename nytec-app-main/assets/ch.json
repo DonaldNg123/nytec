@@ -68,6 +68,10 @@
         "whenverified":"我已經驗證!",
         "verificationsent":"驗證鏈接已發送至您的郵箱!",
         "checkjunkmail":"請檢查您的垃圾郵件或垃圾郵件文件夾。",
-        "notverified":"你還沒有驗證!"
+        "notverified":"你還沒有驗證!",
+        "error":"錯誤",
+        "badURL": "無法打開網址",
+        "ContactWebsite": "联系方式网站",
+        "ContactForms": "联系表格"
     }
 }

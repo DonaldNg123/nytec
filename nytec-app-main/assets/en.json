@@ -69,7 +69,11 @@
         "whenverified":"I have verified!",
         "verificationsent":"Verification link has been sent to your email!",
         "checkjunkmail":"Please check your junk mail or junk mail folder.",
-        "notverified":"You are not verified yet!"
+        "notverified":"You are not verified yet!",
+        "error":"Error",
+        "badURL": "Unable to open URL",
+        "ContactWebsite": "Contact Website",
+        "ContactForms":"Contact Forms"
 
     }
 }
