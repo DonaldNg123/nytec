@@ -47,7 +47,7 @@ export default function Auth(props) {
 	const submitHandler = async () => {
 		// Check that passwords match
 		if (!isLogin && password !== retypedPassword) {
-			Alert.alert("密碼不匹配!", "請再試一次!");
+			Alert.alert(t("Passwordsdonotmatch"), t("Tryagain"));
 			return;
 		}
 

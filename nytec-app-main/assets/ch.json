@@ -72,6 +72,14 @@
         "error":"錯誤",
         "badURL": "無法打開網址",
         "ContactWebsite": "联系方式网站",
-        "ContactForms": "联系表格"
+        "ContactForms": "联系表格",
+        "Passwordsdonotmatch":"密碼不匹配!",
+        "Tryagain":"請再試一次!",
+        "incorrectpassword":"密碼不正確",
+        "Passwordchanged":"密碼已更改。 請重新登錄。",
+        "invalidID":"您的 ID 無效。請重新登錄以獲取新的。",
+        "currentpassw":"當前密碼",
+        "newpassw":"新密碼",
+        "change":"更改密碼!"
     }
 }

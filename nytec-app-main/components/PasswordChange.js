@@ -9,6 +9,7 @@ import { mediumFontSize } from "../constants/Sizes";
 import CustomButton from "./CustomButton";
 import Input from "./Input";
 import axios from "axios";
+import { t } from "i18next";
 
 export default function PasswordChange(props) {
 	const { changing, setChanging } = props;
@@ -51,7 +52,7 @@ export default function PasswordChange(props) {
 			return [idToken, refreshToken, expirationDate, expiresIn];
 		} catch (err) {
 			console.log(err.response.data.error.message);
-			Alert.alert("錯誤", "密碼不正確");
+			Alert.alert(t("error"), t("incorrectpassword"));
 			return null;
 		}
 	};
@@ -59,7 +60,7 @@ export default function PasswordChange(props) {
 	const submitHandler = async () => {
 		// Check passwords match
 		if (newPassword !== retypedPassword) {
-			Alert.alert("密碼不匹配!", "請再試一次!");
+			Alert.alert(t("Passwordsdonotmatch"), t("Tryagain"));
 			return;
 		}
 
@@ -95,7 +96,7 @@ export default function PasswordChange(props) {
 				}
 			);
 
-			Alert.alert("成功!", "密碼已更改。 請重新登錄。", [
+			Alert.alert(t("成功!"), t("Passwordchanged"), [
 				{
 					text: "Ok",
 					onPress: () => {
@@ -106,31 +107,31 @@ export default function PasswordChange(props) {
 				},
 			]);
 		} catch (err) {
-			let message = "處理您的信息時出錯。";
+			let message = t("errormessage");
 			if (err.response) {
 				switch (err.response.data.error.message) {
 					case "INVALID_ID_TOKEN":
-						message = "您的 ID 無效。請重新登錄以獲取新的。";
+						message = t("invalidID");
 						break;
 					case "WEAK_PASSWORD : Password should be at least 6 characters":
-						message = "密碼應至少為 6 個字。";
+						message = t('weakpassword');
 						break;
 				}
 			}
-			Alert.alert("錯誤", message);
+			Alert.alert(t("mistake"), message);
 		}
 	};
 
 	return (
 		<View style={styles.container}>
 			<Text style={styles.text} onPress={pressHandler}>
-				{changing ? "取消" : props.children}
+				{changing ? t("取消") : props.children}
 			</Text>
 			{changing && (
 				<Input
 					value={originalPassword}
 					onChangeText={setOriginalPassword}
-					placeholder="當前密碼"
+					placeholder={t("currentpassw")}
 					secureTextEntry={true}
 				/>
 			)}
@@ -138,7 +139,7 @@ export default function PasswordChange(props) {
 				<Input
 					value={newPassword}
 					onChangeText={setNewPassword}
-					placeholder="新密碼"
+					placeholder={t("newpassw")}
 					secureTextEntry={true}
 				/>
 			)}
@@ -146,13 +147,13 @@ export default function PasswordChange(props) {
 				<Input
 					value={retypedPassword}
 					onChangeText={setRetypedPassword}
-					placeholder="重新輸入您的新密碼"
+					placeholder={t("rtypepword")}
 					secureTextEntry={true}
 				/>
 			)}
 			{changing && (
 				<CustomButton onPress={submitHandler} style={styles.submit}>
-					更改密碼!
+					{t("change")}
 				</CustomButton>
 			)}
 		</View>

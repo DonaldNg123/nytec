@@ -34,7 +34,7 @@ export default function Button(props) {
 		}
 
 		if (item.type === "INPUTCONTACT"){
-			navigation.push("input123");
+			navigation.push(t("ContactForms"));
 			return;
 		}
 

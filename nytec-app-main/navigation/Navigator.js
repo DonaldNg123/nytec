@@ -18,6 +18,8 @@ import { useTranslation } from "react-i18next";
 import '../assets/i18n';
 
 // Default stack navigator header style
+
+
 const defaultStyle = {
 	headerTintColor: Colors.primary,
 	headerStyle: {
@@ -57,10 +59,11 @@ const AccountNavigator = () => {
 const ButtonNavigatorStack = createStackNavigator();
 
 const ButtonNavigator = () => {
+	const {t, i18n} = useTranslation();
 	return (
 		<ButtonNavigatorStack.Navigator screenOptions={defaultStyle}>
 			<ButtonNavigatorStack.Screen name="List" component={ButtonList} />
-			<ButtonNavigatorStack.Screen name="input123" component={Contactinput} />
+			<ButtonNavigatorStack.Screen name={t("ContactForms")} component={Contactinput} />
 		</ButtonNavigatorStack.Navigator>
 	);
 };

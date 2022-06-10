@@ -73,7 +73,14 @@
         "error":"Error",
         "badURL": "Unable to open URL",
         "ContactWebsite": "Contact Website",
-        "ContactForms":"Contact Forms"
-
+        "ContactForms":"Contact Forms",
+        "Passwordsdonotmatch":"Passwords do not match!",
+        "Tryagain":"Please try again!",
+        "incorrectpassword":"Incorrect Password",
+        "Passwordchanged":"Password changed. Please log in again.",
+        "invalidID":"Your ID is invalid. Please log in again to get a new one.",
+        "currentpassw":"Current Password",
+        "newpassw":"New Password",
+        "change":"Change the Password!"
     }
 }
