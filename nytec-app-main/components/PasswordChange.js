@@ -125,7 +125,7 @@ export default function PasswordChange(props) {
 	return (
 		<View style={styles.container}>
 			<Text style={styles.text} onPress={pressHandler}>
-				{changing ? t("取消") : props.children}
+			{changing ? t("取消") : props.children}
 			</Text>
 			{changing && (
 				<Input
