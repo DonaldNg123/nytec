@@ -10,7 +10,7 @@ import PasswordChange from "./PasswordChange";
 
 import { useTranslation } from "react-i18next";
 import '../assets/i18n';
-
+import SwitchLanguage from "./SwitchLanguage";
 
 
 export default function Account() {
@@ -39,6 +39,7 @@ export default function Account() {
 				>
 					{t("changepassword")}
 				</PasswordChange>
+				<SwitchLanguage/>
 			</View>
 		</Background>
 	);

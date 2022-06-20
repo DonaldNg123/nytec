@@ -48,7 +48,7 @@ export default new Category(0, "home", null, [
 		new Url(22, "COSTSchool", 漢神校務系統, "https://online.nytec.net"),
 	]),
 
-	new Url(3, "Workshop", 神學薈萃, "https://workshop.nytec.net"),
+	new Url(3, "TheologicalEssence", 神學薈萃, "https://workshop.nytec.net"),
 
 	new Url(4, "TheologicalEncyclopedia", 神學百科, "https://ebook.nytec.net"),
 
@@ -58,15 +58,15 @@ export default new Category(0, "home", null, [
 	]),
 
 	new Category(6, "LatestNews", 最新消息, [
-		new Url(61, "VariousLectures", 各類講座, "https://nytec.net/news"),
-		new Url(62, "CenterActivites", 中心活動, "https://nytec.net/news"),
+		new Url(61, "Workshops", 各類講座, "https://nytec.net/news"),
+		new Url(62, "UpcomingEvents", 中心活動, "https://nytec.net/news"),
 		new Url(
 			63,
-			"HolylandtourandStudygroup",
+			"Holylandtour",
 			聖地旅遊學習團,
 			"https://nytec.net/holyland/"
 		),
-		new Url(64, "OtherLatestNews", 其他最新消息, "https://nytec.net/news"),
+		new Url(64, "LatestNews", 其他最新消息, "https://nytec.net/news"),
 	]),
 
 	new Category(7, "ContactUs", 聯絡我們, [

@@ -1,6 +1,6 @@
 import axios from "axios";
-import React, { useState } from "react";
-import { Text, View, Alert, StyleSheet } from "react-native";
+import React, { useState, useEffect } from "react";
+import { Text, View, Alert, StyleSheet} from "react-native";
 import { useSelector } from "react-redux";
 
 import Colors from "../constants/Colors";
@@ -11,13 +11,16 @@ import { mediumFontSize } from "../constants/Sizes";
 
 import { useTranslation } from "react-i18next";
 import '../assets/i18n';
+import SwitchLanguage from "./SwitchLanguage";
 
-export default function Admin() {
+export default function Admin(props) {
 	//Used for Translating App
 	const {t, i18n} = useTranslation();
 	// Input states
 	const [title, setTitle] = useState("");
 	const [message, setMessage] = useState("");
+	const currentLanguage = i18n.language
+
 
 	const idToken = useSelector((state) => state.auth.idToken);
 
@@ -121,6 +124,7 @@ export default function Admin() {
 	};
 	
 	return (
+		<>
 		<Background>
 			<View style={styles.container}>
 				<Text style={styles.label}>{t("Title2")}</Text>
@@ -142,8 +146,10 @@ export default function Admin() {
 				>
 					{t("Send")}
 				</CustomButton>
+				<SwitchLanguage/>
 			</View>
 		</Background>
+		</>
 	);
 }
 
