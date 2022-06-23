@@ -42,16 +42,14 @@ export default function Admin(props) {
 			const response = await axios.get(
 				`https://nytec-app-default-rtdb.firebaseio.com/tokens.json?auth=${idToken}`
 			);
-			 const obj = response.data;
+			const obj = response.data;
 
-			//   for (const key in obj) {
-			//   	const arr = obj[key];
-			//   	for (const item of arr.tokens) {
-			//   		tokenList.add(item);
-			//   	}
-			//   }
-			tokenList.add("ExponentPushToken[XCXl6HO5kxm_AZ1hBYIrkD]")
-
+			for (const key in obj) {
+				const arr = obj[key];
+				for (const item of arr.tokens) {
+					tokenList.add(item);
+				}
+			}
 		} catch (err) {
 			console.log(err.message);
 		}
@@ -61,12 +59,12 @@ export default function Admin(props) {
 		let errorCount = 0;
 
 		// Make push notification API request to Expo notification endpoint
-		const send = async () => {
+		const send = async (token) => {
 			try {
 				await axios.post(
 					"https://exp.host/--/api/v2/push/send",
 					{
-						to: "ExponentPushToken[XCXl6HO5kxm_AZ1hBYIrkD]",
+						to: token,
 						title: title,
 						body: message,
 					},

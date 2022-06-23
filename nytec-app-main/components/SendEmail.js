@@ -1,6 +1,4 @@
 // send-email.js
-
-// We can use react-native Linking to send email
 import qs from 'qs';
 import { Linking } from 'react-native';
 

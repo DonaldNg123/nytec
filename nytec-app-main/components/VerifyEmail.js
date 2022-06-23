@@ -39,25 +39,25 @@ export default function VerifyEmail(props) {
 				t("checkjunkmail")
 			);
 		} catch (err) {
-			let message = "無法發送您的驗證電子郵件。";
+			let message = t("CouldnotVerify");
 			if (err.response) {
 				switch (err.response.data.error.message) {
 					case "INVALID_ID_TOKEN":
-						message = "您的 ID 無效。請重新登錄以獲取新的。";
+						message = t("invalidID");
 					case "USER_NOT_FOUND":
-						message = "找不到用戶。";
+						message = t("usernotfound");
 					case "TOO_MANY_ATTEMPTS_TRY_LATER":
 						message = "太多的嘗試。 請稍後再試。";
 				}
 			}
-			Alert.alert("發送電子郵件時出錯", message);
+			Alert.alert(t("emailsentfail"), message);
 		}
 
 		if (attempts === 3) {
 			// Third time failing
 			Alert.alert(
-				"還是不工作嗎?",
-				"請在下一頁檢查您的電子郵件是否正確。"
+				t("notworking"),
+				t("checkemail")
 			);
 		}
 		setAttempts((state) => state + 1);
@@ -84,17 +84,17 @@ export default function VerifyEmail(props) {
 			// Set redux state
 			dispatch(authActions.sendToRedux({ emailVerified: emailVerified }));
 		} catch (err) {
-			let message = "無法驗證您。";
+			let message = t("cantverifyyou");
 			console.dir(err);
 			if (err.response) {
 				switch (err.response.data.error.message) {
 					case "INVALID_ID_TOKEN":
-						message = "您的 ID 無效。請重新登錄以獲取新的。";
+						message = t("invalidID");
 					case "USER_NOT_FOUND":
-						message = "找不到用戶。";
+						message = t("usernotfound");
 				}
 			}
-			Alert.alert("驗證您的電子郵件時出錯。", message);
+			Alert.alert(t("There was an error verifying your email."), message);
 		}
 		setAttempts(0);
 	};

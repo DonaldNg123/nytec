@@ -9,6 +9,7 @@ import DialogInput from "react-native-dialog/lib/Input";
 export default function PasswordReset(props) {
 	const [visible, setVisible] = useState(false);
 	const [email1, setemail1] = useState('');
+	// This code is for ios prompt
 	// const passwordChangeHandler = async () => {
 		// // Prompt user for email, make API call to send email
 		// console.log("hi")
@@ -54,7 +55,6 @@ export default function PasswordReset(props) {
 	}
 
 	const passwordChangeHandlerandroid = async () => {
-		console.log(email1)
 		// Prompt user for email, make API call to send email
 			try {
 				await axios.post(
@@ -65,24 +65,24 @@ export default function PasswordReset(props) {
 					}
 				);
 				setVisible(false)
-				Alert.alert("成功", "電子郵件已經發送成功.");
+				Alert.alert(t("success"), t("emailsentsuccess"));
 				setemail1("")
 			} catch (err) {
-				let message = "發送電子郵件時出錯.";
+				let message = t("emailsentfail");
 				console.log(err.response.data.error.message);
 				if (err.response) {
 					switch (err.response.data.error.message) {
 						case "EMAIL_NOT_FOUND":
-							message = "電子郵件有錯誤.";
+							message = t("emailnotfound");
 							setemail1("")
 							break;
 						case "INVALID_EMAIL":
-							message = "電子郵件無效。";
+							message = t("invalidemail");
 							setemail1("")
 							break;
 					}
 				}
-				Alert.alert("失敗", message);
+				Alert.alert(t("失敗"), message);
 			};
 
 	}

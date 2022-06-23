@@ -63,7 +63,7 @@ const ButtonNavigator = () => {
 	return (
 		<ButtonNavigatorStack.Navigator screenOptions={defaultStyle}>
 			<ButtonNavigatorStack.Screen name="List" component={ButtonList} />
-			<ButtonNavigatorStack.Screen name={t("ContactForms")} component={Contactinput} />
+			<ButtonNavigatorStack.Screen name={t("ContactForms")} component={ButtonList} />
 		</ButtonNavigatorStack.Navigator>
 	);
 };

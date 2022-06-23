@@ -79,6 +79,24 @@
         "invalidID":"您的 ID 無效。請重新登錄以獲取新的。",
         "currentpassw":"當前密碼",
         "newpassw":"新密碼",
-        "change":"更改密碼!"
+        "change":"更改密碼!",
+        "success":"成功",
+        "emailsentsuccess":"電子郵件已經發送成功.",
+        "emailsentfail":"發送電子郵件時出錯.",
+        "fail":"失敗",
+        "CouldnotVerify":"無法發送您的驗證電子郵件。",
+        "usernotfound":"找不到用戶。",
+        "toomanyattemptstryagain1":"太多的嘗試。 請稍後再試。",
+        "notworking":"還是不工作嗎?",
+        "checkemail":"請在下一頁檢查您的電子郵件是否正確。",
+        "cantverifyyou":"無法驗證您。",
+        "errorverifyingemail":"驗證您的電子郵件時出錯。",
+        "Name":"姓名",
+        "Email":"电子邮件",
+        "Subject":"主题",
+        "Message":"信息",
+        "Sendms":"发送",
+        "enteremail":"请输入您的邮箱",
+        "entername":"请输入您的姓名"
     }
 }

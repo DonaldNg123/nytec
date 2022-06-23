@@ -8,6 +8,8 @@ import Textarea from './Textarea';
 import CustomButton from './CustomButton';
 import { Platform } from 'react-native-web';
 import { sendEmail } from './SendEmail';
+import { useTranslation } from "react-i18next";
+import '../assets/i18n';
 
 
 function Contactinput() {
@@ -15,6 +17,7 @@ function Contactinput() {
 	const [message, setMessage] = useState("");
 	const [subject, setSubject] = useState("");
 	const [name, setName] = useState("");
+	const {t, i18n} = useTranslation();
 
 	const [open, setOpen] = useState(false);
 	const [value, setValue] = useState(null);
@@ -47,9 +50,9 @@ function Contactinput() {
 
 	const sendmessagetoemail = () => {
 		sendEmail(
-			'obm85796@jiooq.com',
-			'Greeting!',
-			'Test123'
+			'value',
+			'subject',
+			'message'
 		).then(() => {
 			console.log('Our email successful provided to device mail ');
 		});
@@ -69,33 +72,33 @@ function Contactinput() {
 			</View>
 			<KeyboardAvoidingView behavior='position' keyboardVerticalOffset={Platform.OS === 'ios' ? 40 : 0}>
 			<ScrollView style={styles.container}>
-				<Text style={styles.label1}>Please enter your Email</Text>
+				<Text style={styles.label1}>{t("enteremail")}</Text>
 					<Input
 						value={title}
 						onChangeText={titleChangeHandler}
-						placeholder="Email"
+						placeholder={t("Email")}
 					/>
-				<Text style={styles.label}>Please enter your Name</Text>
+				<Text style={styles.label}>{t("entername")}</Text>
 					<Input
 						value={name}
 						onChangeText={nameChangeHandler}
-						placeholder="Name"
+						placeholder={t("Name")}
 					/>
-				<Text style={styles.label}>Subject</Text>
+				<Text style={styles.label}>{t("Subject")}</Text>
 					<Input
 						value={subject}
 						onChangeText={subjectChangeHandler}
-						placeholder="Subject"
+						placeholder={t("Subject")}
 					/>
-				<Text style={styles.label}>Message</Text>
+				<Text style={styles.label}>{t("Message")}</Text>
 				<Textarea
 					value={message}
 					onChangeText={messageChangeHandler}
-					placeholder="Message"
+					placeholder={t("Message")}
 					style={styles.messageInput}
 				/>
 				<CustomButton onPress={sendmessagetoemail}>
-					<Text>Send</Text>
+					<Text>{t("Sendms")}</Text>
 				</CustomButton>
 			</ScrollView>
 			</KeyboardAvoidingView>

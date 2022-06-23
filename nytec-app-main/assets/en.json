@@ -80,7 +80,24 @@
         "invalidID":"Your ID is invalid. Please log in again to get a new one.",
         "currentpassw":"Current Password",
         "newpassw":"New Password",
-        "change":"Change the Password!"
-
+        "change":"Change the Password!",
+        "success":"Success",
+        "emailsentsuccess":"Email has been sent successfully.",
+        "emailsentfail":"There was an error sending the email.",
+        "fail":"Fail",
+        "CouldnotVerify":"Your verification email could not be sent.",
+        "usernotfound":"User not Found",
+        "toomanyattemptstryagain1":"You have too many failed attempts. Please try again later.",
+        "notworking":"Still not working?",
+        "checkemail":"Please check that your email is correct on the next page.",
+        "cantverifyyou":"Unable to verify you.",
+        "errorverifyingemail":"There was an error verifying your email.",
+        "Name":"Name",
+        "Email":"Email",
+        "Subject":"Subject",
+        "Message":"Message",
+        "Sendms":"Send",
+        "enteremail":"Please enter your Email",
+        "entername":"Please enter your Name"
     }
 }
