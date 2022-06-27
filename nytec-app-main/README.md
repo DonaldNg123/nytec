@@ -129,6 +129,8 @@ Users are then required to input their name, email, and the message body.
 
 ## Translations
 
+If the Buttons are pressed, it will change all text within the app to either English or Chinese (Defaulted to Chinese).
+
  <img src="assets/TranslationButton.png" width=33%>
 
 The users are able to change the language between English and Chinese using buttons. The buttons are placed on each of the main pages and subpages.
