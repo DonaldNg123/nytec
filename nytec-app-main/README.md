@@ -117,19 +117,18 @@ The `users` table stores the role of each user. It is worth mentioning that the 
 
 The users are able to select the department that they wish to contact:
 
-info@nytec.net
-information@nytec-cost.org
-academicoffice@nytec-cost.org
-registrationdept@nytec-cost.org
-alumni@nytec-cost.org
-chaplains@nytec.-cost.org
+info@nytec.net, 
+information@nytec-cost.org, 
+academicoffice@nytec-cost.org, 
+registrationdept@nytec-cost.org, 
+alumni@nytec-cost.org, 
+chaplains@nytec.-cost.org, 
 administrationoffice@nytec-cost.org
 
 Users are then required to input their name, email, and the message body.
 
-##Translation
+##Translations
 
  <img src="assets/TranslationButton.png" width=33%>
 
 The users are able to change the language between English and Chinese using buttons. The buttons are placed on each of the main pages and subpages.
-
