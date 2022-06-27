@@ -6,6 +6,9 @@ https://play.google.com/store/apps/details?id=com.nytec.nytec
     <img src="assets/home-screen.png" width=33%>
     <img src="assets/account-screen.png" width=33%>
     <img src="assets/admin-screen.png" width=33%>
+    <img src="assets/home-screen-en.png" width=33%>
+    <img src="assets/account-screen-en.png" width=33%>
+    <img src="assets/admin-screen-en.png" width=33%>
 </div>
 
 ## Pushing a New Update
@@ -95,7 +98,7 @@ tokens
 The `tokens` table stores a user's push notification tokens, which are sent to Expo's push notification API service when an admin creates a notification.
 The nested `tokens` variable is an array. There may be multiple tokens if a user has multiple devices.
 
-### Users
+### Users 
 
 Sample structure:
 
@@ -109,3 +112,24 @@ users
 ```
 
 The `users` table stores the role of each user. It is worth mentioning that the API was designed so that a user cannot set their `role` to anything but `user`. `admin` must be set from the Firebase console.
+
+## Contact Forms (Work-in-Progress)
+
+The users are able to select the department that they wish to contact:
+
+info@nytec.net
+information@nytec-cost.org
+academicoffice@nytec-cost.org
+registrationdept@nytec-cost.org
+alumni@nytec-cost.org
+chaplains@nytec.-cost.org
+administrationoffice@nytec-cost.org
+
+Users are then required to input their name, email, and the message body.
+
+##Translation
+
+ <img src="assets/TranslationButton.png" width=33%>
+
+The users are able to change the language between English and Chinese using buttons. The buttons are placed on each of the main pages and subpages.
+
