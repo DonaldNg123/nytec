@@ -127,7 +127,7 @@ administrationoffice@nytec-cost.org
 
 Users are then required to input their name, email, and the message body.
 
-##Translations
+## Translations
 
  <img src="assets/TranslationButton.png" width=33%>
 
