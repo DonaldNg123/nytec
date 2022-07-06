@@ -8,15 +8,14 @@ https://play.google.com/store/apps/details?id=com.nytec.nytec
     <img src="assets/admin-screen.png" width=33%>
 </div>
 Main app homescreen, account info screen, and admin screen in Chinese.
-\n
-
+<br />
 <div>
     <img src="assets/home-screen-en.png" width=33%>
     <img src="assets/account-screen-en.png" width=33%>
     <img src="assets/admin-screen-en.png" width=33%>
 </div>
-
 Main app homescreen, account info screen, and admin screen in English.
+<br />
 
 ## Pushing a New Update
 1. Run `expo publish` to push changes directly into the app store.
