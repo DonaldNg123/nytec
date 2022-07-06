@@ -7,6 +7,7 @@ https://play.google.com/store/apps/details?id=com.nytec.nytec
     <img src="assets/account-screen.png" width=33%>
     <img src="assets/admin-screen.png" width=33%>
 </div>
+<br />
 Main app homescreen, account info screen, and admin screen in Chinese.
 <br />
 <div>
