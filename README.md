@@ -138,8 +138,8 @@ The users are able to change the language between English and Chinese using butt
 ## Reset Password
 
 
- <img src="assets/ResetPassword" width=33%>
+ <img src="assets/ResetPassword.PNG" width=33%>
 
 Login screen has a "Forgot your password? Click here!" button. When pressed a popup/screen prompt would appear, asking for the Email that is associated with your account.
 
- <img src="assets/ResetPasswordPrompt" width=33%>
+ <img src="assets/ResetPasswordPrompt.PNG" width=33%>
