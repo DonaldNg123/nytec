@@ -134,3 +134,12 @@ If the Buttons are pressed, it will change all text within the app to either Eng
  <img src="assets/TranslationButton.png" width=33%>
 
 The users are able to change the language between English and Chinese using buttons. The buttons are placed on each of the main pages and subpages.
+
+## Reset Password
+
+
+ <img src="assets/ResetPassword.png" width=33%>
+
+Login screen has a "Forgot your password? Click here!" button. When pressed a popup/screen prompt would appear, asking for the Email that is associated with your account.
+
+ <img src="assets/ResetPasswordPrompt.png" width=33%>
